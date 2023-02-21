@@ -1,0 +1,127 @@
+
+
+
+// grid settings
+
+%d-flex-row-wrap-center {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+%d-flex-row-nowrap-center {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+%d-flex-column-wrap-center {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+%d-flex-column-nowrap-center {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+
+// responsive settings
+.container {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 575px) {
+    .container {
+        width: 100%;
+    }
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+// mixins
+@mixin breakpoints($point) {
+    @if $point == 'xs' {
+        @media (max-width: 575px) {
+            @content;
+        }
+    } @else if $point == 'sm' {
+        @media (min-width: 576px) {
+            @content;
+        }
+    } @else if $point == 'md' {
+        @media (min-width: 768px) {
+            @content;
+        }
+    } @else if $point == 'lg' {
+        @media (min-width: 992px ) {
+            @content;
+        }
+    }
+}
+
+@mixin arrow-left($dimension) {
+    @extend %arrow;
+    width: $dimension;
+    height: $dimension;
+
+    &:hover {
+        background-color: #F5F5F5;
+    }
+
+    &:active {
+        background-color: #F5F5F5;
+    }
+
+    &:active > img {
+        transform: translateX(-8px);
+    }
+}
+
+@mixin arrow-right($dimension) {
+    @extend %arrow;
+    width: $dimension;
+    height: $dimension;
+
+    &:hover {
+        background-color: #F5F5F5;
+    }
+
+    &:active {
+        background-color: #F5F5F5;
+    }
+
+    &:active > img {
+        transform: translateX(8px);
+    }
+}

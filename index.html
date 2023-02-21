@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Goldy Store is a marketplace for beautiful and different jewelers">
+    <link rel="icon" href="images/icon.png">
+    <title>Goldy Store</title>
+
+    <!-- normalize file -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- css path -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- start header -->
+    <header class="header__desktop container">
+        <div class="header__info">
+            <div class="select-region">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="select__input region">
+                    <ul class="select__dropdown ">
+                        <li class="selected">Санкт-Петербург<i class="fa-solid fa-check"></i></li>
+                        <li>Москва<i class="fa-solid fa-check"></i></li>
+                        <li>Нижний Новгород<i class="fa-solid fa-check"></i></li>
+                        <li>Ростов-на-Дону<i class="fa-solid fa-check"></i></li>
+                    </ul>
+                    <p>Санкт-Петербург</p>
+                    <img src="images/dropdown-arrow.svg" alt="arrow" aria-hidden="true" width="13px" height="13px">
+                </div>
+            </div>
+            <div class="phone-number">
+                <i class="fa-solid fa-phone"></i>
+                <p class="mb-0">8 800 785-25-35</p>
+            </div>
+            <a class="logo" href="#">
+                <img src="images/logo.svg" alt="logo" >
+            </a>
+            <div class="header__login ">
+                <span class="border-end pe-3">Вход</span>
+                <span>Регистрация</span>
+            </div>
+            <div class="header__user-stats">
+                <span>
+                    <img src="images/favorite.svg" alt="favorite items" width="20" height="20">
+                </span>
+                <span>
+                    <img src="images/chart.svg" alt="compare" width="20" height="20">
+                </span>
+                <span>
+                    <img src="images/bag.svg" alt="shoping bag" width="20" height="20">
+                </span>
+            </div>
+
+        </div>
+        <nav class="nav__desktop">
+            <ul class="nav__menu">
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#sales">Акции</a></li>
+                <li><a href="#">Бренды</a></li>
+                <li><a href="#">Магазины</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#articles">Статьи</a></li>
+            </ul>
+            <form action="#" class="nav__search">
+                <button type="submit" aria-label="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input type="search" id="search_desktop" name="search" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
+            </form>
+        </nav>
+    </header>
+
+    <header class="header__mobile">
+        <div class="container">
+            <div class="header__info">
+                <a class="logo" href="#">
+                    <img src="images/logo.svg" alt="logo" >
+                </a>
+                <div class="header__user-stats">
+                    <span>
+                        <img src="images/favorite.svg" alt="favorite items" width="20" height="20">
+                    </span>
+                    <span>
+                        <img src="images/chart.svg" alt="compare" width="20" height="20">
+                    </span>
+                    <span>
+                        <img src="images/bag.svg" alt="shoping bag" width="20" height="20">
+                    </span>
+                    <i class="fa-solid fa-bars header__menu-mobile" id="header__menu-mobile"></i>
+                </div>
+            </div>
+        </div>
+        <div class="nav__mobile-overlay"></div>
+        <nav class="nav__mobile">
+            <ul class="nav__menu" id="nav__menu__mobile">
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#sales">Акции</a></li>
+                <li><a href="#">Бренды</a></li>
+                <li><a href="#">Магазины</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#articles">Статьи</a></li>
+            </ul>
+            <form action="#" class="nav__search">
+                <input type="search" id="search_mobile" name="search" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
+                <button type="submit" aria-label="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div class="select-region">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="select__input region">
+                    <ul class="select__dropdown ">
+                        <li class="selected">Санкт-Петербург<i class="fa-solid fa-check"></i></li>
+                        <li>Москва<i class="fa-solid fa-check"></i></li>
+                        <li>Нижний Новгород<i class="fa-solid fa-check"></i></li>
+                        <li>Ростов-на-Дону<i class="fa-solid fa-check"></i></li>
+                    </ul>
+                    <p>Санкт-Петербург</p>
+                    <img src="images/dropdown-arrow.svg" alt="arrow" aria-hidden="true" width="13px" height="13px">
+                </div>
+            </div>
+            <div class="phone-number">
+                <i class="fa-solid fa-phone"></i>
+                <p class="mb-0">8 800 785-25-35</p>
+            </div>
+            <div class="header__login ">
+                <span class="border-end pe-3">Вход</span>
+                <span>Регистрация</span>
+            </div>
+            
+        </nav>
+    </header>
+    <!-- end header -->
+
+    <main>
+        <!-- start carousel  -->
+        <section class="container">
+            <div class="hero-carousel">
+                <img src="images/union-bg.png" alt="diamond">
+                <div class="arrow-left" id="hero_toLeft">
+                    <img src="images/arrow-left.svg" alt="arrow to previous" width="16">
+                </div>
+                <div class="arrow-right" id="hero_toRight">
+                    <img src="images/arrow-right.svg" alt="arrow to previous" width="16">
+                </div>
+                <div class="hero__bullets">
+                    <span class="active" data-index="0"></span>
+                    <span data-index="1"></span>
+                    <span data-index="2"></span>
+                </div>
+                <div class="hero__content">
+                    <p>Суперскидка до 60%</p>
+                    <h2>НА БРИЛЛИАНТЫ</h2>
+                    <button class="btn-order">Подробнее</button>
+                </div>
+                <div class="hero__slider">
+                    <picture class="active">
+                        <source media="(max-width: 767px)" srcset="images/item01_sm.webp">
+                        <source media="(max-width: 991px)" srcset="images/item01_md.webp">
+                        <img src="images/item01.webp" alt="ring">
+                    </picture>
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/item02_sm.webp">
+                        <source media="(max-width: 991px)" srcset="images/item02_md.webp">
+                        <img src="images/item02.webp" alt="ring">
+                    </picture>
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/item03_sm.webp">
+                        <source media="(max-width: 991px)" srcset="images/item03_md.webp">
+                        <img src="images/item03.webp" alt="ring">
+                    </picture>
+                </div>
+            </div>
+        </section>
+        <!-- end carousel  -->
+
+        <!-- start catalog -->
+        <section class="catalog container" aria-label="product's catalog" id="catalog">
+            <h2 class="section-title">Популярные категории</h2>
+            <div class="catalog__wrpper">
+                <div class="catalog__card">
+                    <img src="images/catalog_rings.png" alt="rings">
+                    <p>Кольца</p>
+                </div>
+                <div class="catalog__card">
+                    <img src="images/catalog_earring.png" alt="earrings">
+                    <p>Серьги</p>
+                </div>
+                <div class="catalog__card">
+                    <img src="images/catalog_engagement_rings.png" alt="engagement rings">
+                    <p>Помолвочные кольца</p>
+                </div>
+                <div class="catalog__card">
+                    <img src="images/catalog_bracelets.png" alt="bracelets">
+                    <p>Браслеты</p>
+                </div>
+                <div class="catalog__card">
+                    <img src="images/catalog_necklaces_and_pendants.png" alt="necklaces and pendants">
+                    <p>Колье и подвески</p>
+                </div>
+                <div class="catalog__card">
+                    <img src="images/catalog_watch.png" alt="watch">
+                    <p>Часы</p>
+                </div>
+            </div>
+        </section>
+        <!-- end catalog -->
+
+        <!-- start sales -->
+        <section class="sales container" aria-label="sales" id="sales">
+            <h2 class="section-title">Распродажа</h2>
+            <div class="sales__header">
+                <div class="sales__catalog">
+                    <button class="catalog__btn active">Кольца</button>
+                    <button class="catalog__btn">Серьги</button>
+                    <button class="catalog__btn">Браслеты</button>
+                    <button class="catalog__btn">Часы</button>
+                </div>
+                <div class="sales__arrows">
+                    <div class="arrow-left btn-disabled">
+                        <img src="images/arrow-left.svg" alt="arrow to previous" width="16">
+                    </div>
+                    <div class="arrow-right">
+                        <img src="images/arrow-right.svg" alt="arrow to previous" width="16">
+                    </div>
+                </div>
+            </div>
+            <div class="sales__wrapper">
+                <div class="sales__card">
+                    <div class="sales__badges">
+                        <span class="badges sale">Sale</span>
+                    </div>
+                    <div class="action-btn">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="sales__img">
+                        <img src="images/sale01.webp" alt="rings" class="active">
+                        <img src="images/sale02.webp" alt="rings">
+                        <img src="images/sale03.webp" alt="rings">
+                        <div class="sales__bullets">
+                            <span class="active" data-index="0"></span>
+                            <span data-index="1"></span>
+                            <span data-index="2"></span>
+                        </div>
+                    </div>
+                    <div class="sales__card-price">
+                        <h3>41000 &#8381<small><del>65000 &#8381</del></small></h3>
+                        <span class="badges discount">-45%</span>
+                    </div>
+                    <p>Стильное кольцо из белого золота c бриллиантами</p>
+                    <div class="sales__card-options">
+                        <div class="select__input">
+                            
+                            <ul class="select__dropdown ">
+                                <li class="selected">Белое золото<i class="fa-solid fa-check"></i></li>
+                                <li>Желтое золото<i class="fa-solid fa-check"></i></li>
+                                <li>Серебро<i class="fa-solid fa-check"></i></li>
+                            </ul>
+                            <p>Белое золото</p>
+                            <img src="images/dropdown-arrow.svg" alt="arrow" aria-hidden="true" width="13px" height="13px">
+                        </div>
+                        <div class="select__input">
+                            <ul class="select__dropdown">
+                                <li class="selected">Размер: 16<i class="fa-solid fa-check"></i></li>
+                                <li>Размер: 17<i class="fa-solid fa-check"></i></li>
+                                <li>Размер: 18<i class="fa-solid fa-check"></i></li>
+                            </ul>
+                            <p>Размер: 16</p>
+                            <img src="images/dropdown-arrow.svg" alt="arrow" aria-hidden="true" width="13px" height="13px">
+                        </div>
+                    </div>
+                    <button type="button" class="mobile__dropdown-btn" aria-label="more options"><i class="fa-solid fa-circle-chevron-down"></i></button>
+                </div>
+
+                <div class="sales__card">
+                    <div class="sales__badges">
+                        <span class="badges hit">Хит</span>
+                    </div>
+                    <div class="action-btn">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="sales__img">
+                        <img src="images/sale02.webp" alt="rings" class="active">
+                        <img src="images/sale03.webp" alt="rings">
+                        <img src="images/sale01.webp" alt="rings">
+                        <div class="sales__bullets">
+                            <span class="active" data-index="0"></span>
+                            <span data-index="1"></span>
+                            <span data-index="2"></span>
+                        </div>
+                    </div>
+                    <div class="sales__card-price">
+                        <h3>41000 &#8381</h3>
+                    </div>
+                    <p>Стильное кольцо из белого золота c бриллиантами</p>
+                    <div class="sales__card-options">
+                        <div class="select__input">
+                            
+                            <ul class="select__dropdown ">
+                                <li class="selected">Белое золото<i class="fa-solid fa-check"></i></li>
+                                <li>Желтое золото<i class="fa-solid fa-check"></i></li>
+                                <li>Серебро<i class="fa-solid fa-check"></i></li>
+                            </ul>
+                            <p>Белое золото</p>
+                            <img src="images/dropdown-arrow.svg" alt="arrow" aria-hidden="true" width="13px" height="13px">
+                        </div>
+                        <div class="select__input">
+                            <ul class="select__dropdown">
+                                <li class="selected">Размер: 16<i class="fa-solid fa-check"></i></li>
+                                <li>Размер: 17<i class="fa-solid fa-check"></i></li>
+                                <li>Размер: 18<i class="fa-solid fa-check"></i></li>
+                            </ul>
+                            <p>Размер: 16</p>
+                            <img src="images/dropdown-arrow.svg" alt="arrow" aria-hidden="true" width="13px" height="13px">
+                        </div>
+                    </div>
+                    <button type="button" class="mobile__dropdown-btn" aria-label="more options"><i class="fa-solid fa-circle-chevron-down"></i></button>
+                    
+                </div>
+
+                <div class="sales__card">
+                    <div class="action-btn">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="sales__img">
+                        <img src="images/sale03.webp" alt="rings" class="active">
+                        <img src="images/sale01.webp" alt="rings">
+                        <img src="images/sale02.webp" alt="rings">
+                        <div class="sales__bullets">
+                            <span class="active" data-index="0"></span>
+                            <span data-index="1"></span>
+                            <span data-index="2"></span>
+                        </div>
+                    </div>
+                    <div class="sales__card-price">
+                        <h3>41000 &#8381</h3>
+                    </div>
+                    <p>Стильное кольцо из белого золота c бриллиантами</p>
+                    <div class="sales__card-options">
+                        <div class="select__input">
+                            
+                            <ul class="select__dropdown ">
+                                <li class="selected">Белое золото<i class="fa-solid fa-check"></i></li>
+                                <li>Желтое золото<i class="fa-solid fa-check"></i></li>
+                                <li>Серебро<i class="fa-solid fa-check"></i></li>
+                            </ul>
+                            <p>Белое золото</p>
+                            <img src="images/dropdown-arrow.svg" alt="arrow" aria-hidden="true" width="13px" height="13px">
+                        </div>
+                        <div class="select__input">
+                            <ul class="select__dropdown">
+                                <li class="selected">Размер: 16<i class="fa-solid fa-check"></i></li>
+                                <li>Размер: 17<i class="fa-solid fa-check"></i></li>
+                                <li>Размер: 18<i class="fa-solid fa-check"></i></li>
+                            </ul>
+                            <p>Размер: 16</p>
+                            <img src="images/dropdown-arrow.svg" alt="arrow" aria-hidden="true" width="13px" height="13px">
+                        </div>
+                    </div>
+                    <button type="button" class="mobile__dropdown-btn" aria-label="more options"><i class="fa-solid fa-circle-chevron-down"></i></button>
+                </div>
+
+                <div class="sales__card">
+                    <div class="sales__badges">
+                        <span class="badges new">New</span>
+                    </div>
+                    <div class="action-btn">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <div class="sales__img">
+                        <img src="images/sale01.webp" alt="rings" class="active">
+                        <img src="images/sale02.webp" alt="rings">
+                        <img src="images/sale03.webp" alt="rings">
+                        <div class="sales__bullets">
+                            <span class="active" data-index="0"></span>
+                            <span data-index="1"></span>
+                            <span data-index="2"></span>
+                        </div>
+                    </div>
+                    <div class="sales__card-price">
+                        <h3>41000 &#8381</h3>
+                    </div>
+                    <p>Стильное кольцо из белого золота c бриллиантами</p>
+                    <div class="sales__card-options">
+                        <div class="select__input">
+                            
+                            <ul class="select__dropdown ">
+                                <li class="selected">Белое золото<i class="fa-solid fa-check"></i></li>
+                                <li>Желтое золото<i class="fa-solid fa-check"></i></li>
+                                <li>Серебро<i class="fa-solid fa-check"></i></li>
+                            </ul>
+                            <p>Белое золото</p>
+                            <img src="images/dropdown-arrow.svg" alt="arrow" aria-hidden="true" width="13px" height="13px">
+                        </div>
+                        <div class="select__input">
+                            <ul class="select__dropdown">
+                                <li class="selected">Размер: 16<i class="fa-solid fa-check"></i></li>
+                                <li>Размер: 17<i class="fa-solid fa-check"></i></li>
+                                <li>Размер: 18<i class="fa-solid fa-check"></i></li>
+                            </ul>
+                            <p>Размер: 16</p>
+                            <img src="images/dropdown-arrow.svg" alt="arrow" aria-hidden="true" width="13px" height="13px">
+                        </div>
+                    </div>
+                    <button type="button" class="mobile__dropdown-btn" aria-label="more options"><i class="fa-solid fa-circle-chevron-down"></i></button>
+                </div>
+            </div>
+        </section>
+        <!-- end sales -->
+
+        <!-- start offers -->
+        <section class="offers container" aria-label="offers">
+            <div class="offers__wrapper">
+                <img src="images/bnr01.webp" alt="">
+                <img src="images/bnr02.webp" alt="">
+                <img src="images/bnr03.webp" alt="">
+            </div>
+        </section>
+        <!-- end offers -->
+
+        <!-- start deal of the day -->
+        <section class="deal container" aria-label="deal of the day">
+            <div class="deal__header">
+                <h2 class="section-title">Товар дня</h2>
+                <div class="deal__arrows">
+                    <div class="arrow-left">
+                        <img src="images/arrow-left.svg" alt="arrow to previous" width="16">
+                    </div>
+                    <div class="arrow-right">
+                        <img src="images/arrow-right.svg" alt="arrow to previous" width="16">
+                    </div>
+                </div>
+            </div>
+            <div class="item__card">
+                <div class="card__img">
+                    <div>
+                        <span class="badges new">New</span>
+                        <span class="badges hit">Хит</span>
+                        <span class="badges sale">Sale</span>
+                    </div>
+                    <div class="deal__gallary">
+                        <img src="images/deal_of_day.webp" alt="ring">
+                        <img src="images/deal_of_day.webp" alt="ring">
+                        <img src="images/deal_of_day.webp" alt="ring">
+                    </div>
+                    <i class="fa-solid fa-angle-right" id="deal_toRight"></i>
+                    <i class="fa-solid fa-angle-left" id="deal_toLeft"></i>
+                </div>
+                <div class="card__body">
+                    <div class="item__rate">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>4.2</span>
+                    </div>
+                    <div class="item__name">
+                        <h3>Кольцо из золота с бриллиантами</h3>
+                        <span class="item-number">Артикул: 1012076</span>
+                    </div>
+                    <div class="item__info">
+                        <div class="item__price">
+                            <p>22000 &#8381<small><del>22000 &#8381</del></small></p>
+                            <span class="badges discount">-45%</span>
+                        </div>
+                        <div class="price__timer">
+                            <div >
+                                <p id="hours">12</p>
+                                <span>Часов</span>
+                            </div>
+                            <div >
+                                <p id="minutes">46</p>
+                                <span>Минут</span>
+                            </div>
+                            <div >
+                                <p id="seconds">51</p>
+                                <span>Секунд</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="#" class="item__order-form">
+                        <fieldset class="item__colors">
+                            <legend>ЦВЕТ</legend>
+                            <input type="radio" name="gray_color" id="gray_color"
+                                style="background-color: #D9D9D9" aria-label="gray">
+                            <input type="radio" name="yellow_color" id="yellow_color" checked
+                                style="background-color: #F1CB7E" aria-label="yellow">
+                            <input type="radio" name="orange_color" id="orange_color"
+                                style="background-color: #EA8C48" aria-label="orange">
+                            <input type="radio" name="green_color" id="green_color"
+                                style="background-color: #A7E492" aria-label="light green">
+                        </fieldset>
+                        <fieldset class="item__size">
+                            <legend >Размер
+                                <span tabindex="0"  id="size__tooltips_icon">
+                                    <span class="size__tooltips">Также как существующая теория напрямую зависит от экономической целесообразности принимаемых решений.</span>
+                                    <img src="images/question-mark.png " alt="question mark" aria-hidden="true">
+                                </span>
+                            </legend>
+                            <input type="radio" name="size_16" id="size_16" value="16" data-size="16" checked aria-label="16 size">
+                            <input type="radio" name="size_16.5" id="size_16.5" value="16.5" data-size="16.5" aria-label="16.5 size">
+                            <input type="radio" name="size_17" id="size_17" value="17" data-size="17" aria-label="17 size">
+                            <input type="radio" name="size_17.5" id="size_17.5" value="17.5" data-size="17.5" aria-label="17.5 size">
+                            <input type="radio" name="size_18" id="size_18" value="18" data-size="18" aria-label="18 size">
+                            <input type="radio" name="size_18.5" id="size_18.5" value="18.5" data-size="18.5" aria-label="18.5 size">
+                            <input type="radio" name="size_19" id="size_19" value="19" data-size="19"
+                                disabled aria-label="19 size">
+                            <input type="radio" name="size_19.5" id="size_19.5" value="19.5" data-size="19.5"
+                                disabled aria-label="19.5 size">
+                            <input type="radio" name="size_20" id="size_20" value="20" data-size="20"
+                                disabled aria-label="20 size">
+                            <input type="radio" name="size_20.5" id="size_20.5" value="20.5" data-size="20.5"
+                                disabled aria-label="20.5 size">
+                        </fieldset>
+                        <div class="order-form__btn">
+                            <div class="order-btn">
+                                <button class="btn-order" type="button">в корзину</button>
+                                <button class="btn-order now" type="button">купить в 1 клик</button>
+                            </div>
+                            <div class="action-btn">
+                                <button type="button" class="like-btn"><i
+                                        class="fa-solid fa-heart" ></i>Сохранить</button>
+                                <button type="button"><i
+                                        class="fa-solid fa-chart-simple"></i>Сравнить</button>
+                                <button type="button"><i
+                                        class="fa-solid fa-share-nodes"></i>Поделиться</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- end deal of the day -->
+
+        <!-- start articles -->
+        <section class="articles container" aria-label="articles" id="articles">
+            <div class="articles__header">
+                <h2 class="section-title">Статьи</h2>
+                <a href="#">
+                    Читать все
+                    <img src="images/arrow-right.svg" alt="arrow" width="16" aria-hidden="true">
+                </a>
+            </div>
+            <div class="articles__wrapper">
+                <div class="articles__card">
+                    <img src="images/article01.webp" alt="">
+                    <span>21 сентября 2021</span>
+                    <p>Обручальные кольца: тренды 2021</p>
+                </div>
+                <div class="articles__card">
+                    <img src="images/article02.webp" alt="">
+                    <span>21 сентября 2021</span>
+                    <p>Главные ювелирные тренды года</p>
+                </div>
+                <div class="articles__card">
+                    <img src="images/article03.webp" alt="">
+                    <span>21 сентября 2021</span>
+                    <p>Жемчуг: 7 малоизвестных фактов о культовом украшении</p>
+                </div>
+                <div class="articles__card">
+                    <img src="images/article04.webp" alt="">
+                    <span>21 сентября 2021</span>
+                    <p>Как отличить золото от подделки: 10 практических советов</p>
+                </div>
+            </div>
+        </section>
+        <!-- end articles -->
+    </main>
+
+    <script src="js/nav.js"></script>
+    <script src="js/deal.js"></script>
+    <script src="js/offer.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/sales.js"></script>
+</body>
+
+</html>
