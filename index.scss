@@ -897,9 +897,15 @@ $sumFavoriteItems: '23';
 // start sales
 .sales {
     @extend %section-margin;
+    
 
     @include breakpoints(xs) {
         margin-bottom: 60px;
+    }
+
+    @include breakpoints(lg) {
+        margin-bottom: 80vh;
+        position: relative;
     }
 
     .sales__header {
@@ -974,8 +980,15 @@ $sumFavoriteItems: '23';
         align-items: start;
         gap: 20px;
 
+        @include breakpoints(lg) {
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+        }
+
         .sales__card {
             border: 1px solid #F0F0F0;
+            background-color: $white;
             padding: 24px;
             position: relative;
             transition: 0.3s;
