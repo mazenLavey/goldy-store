@@ -904,7 +904,8 @@ $sumFavoriteItems: '23';
     }
 
     @include breakpoints(lg) {
-        margin-bottom: 100vh;
+        height: 100vh;
+        max-height: 600px;
         position: relative;
     }
 
