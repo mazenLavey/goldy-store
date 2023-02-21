@@ -904,7 +904,7 @@ $sumFavoriteItems: '23';
     }
 
     @include breakpoints(lg) {
-        margin-bottom: 80vh;
+        margin-bottom: 100vh;
         position: relative;
     }
 
@@ -939,12 +939,12 @@ $sumFavoriteItems: '23';
                 &.active {
                     background-color: $black;
                     color: $white;
-                    opacity: 0.5;
-                    animation: showSmooth 0.3s linear 1 forwards;
+                    opacity: 0;
+                    animation: showSmooth 0.3s 1 forwards;
 
                     @keyframes showSmooth {
                         from {
-                            opacity: 0.5;
+                            opacity: 0;
                         }
 
                         to {
