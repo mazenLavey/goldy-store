@@ -25,6 +25,7 @@ fieldset {
 input[type="radio"] {
     /* For iOS < 15 to remove gradient background */
     background-color: #fff;
+    border-radius: unset;
     /* Not removed via appearance */
     margin: 0;
 }
@@ -512,7 +513,7 @@ $sumFavoriteItems: '23';
         top: 0;
         left: 0;
         width: 100vw;
-        height: 100%;
+        height: 100vh;
         background-color: #0000004d;
         z-index: 999;
         opacity: 0;
@@ -846,6 +847,10 @@ $sumFavoriteItems: '23';
 .catalog {
     @extend %section-margin;
 
+    @include breakpoints(xs) {
+        margin-bottom: 60px;
+    }
+
     .catalog__wrpper {
         display: grid;
         grid-auto-rows: minmax(260px, auto);
@@ -893,6 +898,10 @@ $sumFavoriteItems: '23';
 .sales {
     @extend %section-margin;
 
+    @include breakpoints(xs) {
+        margin-bottom: 60px;
+    }
+
     .sales__header {
         @extend %d-flex-row-nowrap-center;
         justify-content: space-between;
@@ -924,11 +933,12 @@ $sumFavoriteItems: '23';
                 &.active {
                     background-color: $black;
                     color: $white;
-                    animation: showSmooth 0.5s 1 forwards;
+                    opacity: 0.5;
+                    animation: showSmooth 0.3s linear 1 forwards;
 
                     @keyframes showSmooth {
                         from {
-                            opacity: 0;
+                            opacity: 0.5;
                         }
 
                         to {
@@ -1161,6 +1171,10 @@ $sumFavoriteItems: '23';
     overflow: hidden;
     transition: 0.3s;
 
+    @include breakpoints(xs) {
+        margin-bottom: 60px;
+    }
+
     .offers__wrapper {
         display: grid;
         grid-template-columns: repeat(3, 80%);
@@ -1187,6 +1201,10 @@ $sumFavoriteItems: '23';
 // start deal of the day
 .deal {
     @extend %section-margin;
+
+    @include breakpoints(xs) {
+        margin-bottom: 60px;
+    }
 
     .deal__header {
         @extend %d-flex-row-nowrap-center;
@@ -1590,6 +1608,10 @@ $sumFavoriteItems: '23';
 // start articles
 .articles {
     @extend %section-margin;
+
+    @include breakpoints(xs) {
+        margin-bottom: 60px;
+    }
 
     .articles__header {
         @extend %d-flex-row-nowrap-center;
