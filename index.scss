@@ -22,10 +22,16 @@ fieldset {
     padding: 0;
 }
 
+input[type="radio"] {
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+}
+
 body {
     font-family: $main-font;
     color: $black;
-    
 }
 
 a {
@@ -560,7 +566,7 @@ $sumFavoriteItems: '23';
 
                 > a {
                     display: block;
-                    padding: 20px;
+                    padding: 10px 20px;
                     border-bottom: 1px solid #e9e9e9;
                     font-weight: 500;
                     transition: 0.3s;
@@ -577,7 +583,7 @@ $sumFavoriteItems: '23';
             @extend %d-flex-row-nowrap-center;
             border-bottom: 1px solid #e9e9e9;
             background-color: $black;
-            padding: 20px;
+            padding: 10px 20px;
     
             > button {
                 border: none;
@@ -604,7 +610,7 @@ $sumFavoriteItems: '23';
         .select-region {
             @extend %d-flex-row-nowrap-center;
             align-items: baseline;
-            padding: 20px;
+            padding: 10px 20px;
             border-bottom: 1px solid #e9e9e9;
 
             > i {
@@ -637,7 +643,7 @@ $sumFavoriteItems: '23';
         .phone-number {
             @extend %d-flex-row-nowrap-center;
             gap: 10px;
-            padding: 20px;
+            padding: 10px 20px;
             border-bottom: 1px solid #e9e9e9;
 
             > i {
@@ -659,7 +665,6 @@ $sumFavoriteItems: '23';
     
             span:first-of-type {
                 padding-right: 10px;
-                // border-right: 1px solid $gray;
             }
     
             > span {
@@ -681,10 +686,11 @@ $sumFavoriteItems: '23';
     background-color: $bg-color;
     position: relative;
     overflow: hidden;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
 
     @include breakpoints(sm) {
         height: 560px;
+        margin-bottom: 120px;
     }
 
     @include breakpoints(lg) {
@@ -914,10 +920,21 @@ $sumFavoriteItems: '23';
                     background-color: #DDDDDD;
                 }
 
-                &:active,
+                
                 &.active {
                     background-color: $black;
                     color: $white;
+                    animation: showSmooth 0.5s 1 forwards;
+
+                    @keyframes showSmooth {
+                        from {
+                            opacity: 0;
+                        }
+
+                        to {
+                            opacity: 1;
+                        }
+                    }
                 }
 
             }
@@ -978,6 +995,7 @@ $sumFavoriteItems: '23';
                 border: none;
                 background: transparent;
                 opacity: 0.5;
+                color: $black;
                 transition: 0.3s;
 
                 @include breakpoints(lg) {
@@ -1469,6 +1487,7 @@ $sumFavoriteItems: '23';
 
                     > input {
                         appearance: none;
+                        border-radius: unset;
                         width: 50px;
                         height: 32px;
                         border: 1px solid $gray;

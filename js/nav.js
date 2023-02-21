@@ -27,7 +27,7 @@ navMenuLinks.addEventListener('click', ()=>{
 const headerMobile = document.querySelector('.header__mobile');
 window.addEventListener('scroll', ()=>{
     if (headerMobile.offsetTop > 0 ) {
-        headerMobile.style = 'box-shadow: 0 0 10px 2px #C9C9C9;';
+        headerMobile.style = 'box-shadow: 0 5px 10px 0px #C9C9C9;';
     } else {
         headerMobile.style = 'box-shadow: unset;';
     }
